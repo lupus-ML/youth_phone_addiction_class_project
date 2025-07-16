@@ -1,5 +1,9 @@
 # Youth Phone Addiction Classification Project
 
+## Live Demo
+[View the App Live](https://youth-phone-addiction-class-project.onrender.com)
+
+
 This repository contains a complete machine learning web application designed to predict the likelihood of smartphone addiction in young individuals. The app is built with Flask for the backend and uses HTML, CSS, JavaScript, and Chart.js for the frontend.
 It includes a trained classification model, multiple visualizations, and a form-based user interface for data input.
 
