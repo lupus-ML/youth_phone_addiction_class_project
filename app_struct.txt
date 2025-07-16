@@ -1,0 +1,15 @@
+teen-phone-addiction-predictor/
+├── app.py                     # Flask backend API
+├── static/
+│   ├── css/
+│   │   └── style.css         # Dark purple theme
+│   ├── js/
+│   │   ├── main.js           # Core functionality
+│   │   ├── visualizations.js # Charts and graphs
+│   │   └── animations.js     # Smooth effects
+│   └── images/
+├── templates/
+│   └── index.html            # Main web interface
+├── saved_models/             # Your ML model files
+├── requirements.txt          # Python dependencies
+└── README.md                # Portfolio documentation

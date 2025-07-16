@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Test</title>
+    <style>
+        body { 
+            background: #1a1a1a; 
+            color: white; 
+            font-family: Arial; 
+            padding: 20px; 
+        }
+        .slider { 
+            width: 300px; 
+            margin: 20px 0; 
+        }
+        .output { 
+            color: #ba55d3; 
+            font-size: 18px; 
+            margin: 10px 0; 
+        }
+        button {
+            background: #6a0dad;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔧 Slider & Button Test</h1>
+    
+    <div>
+        <label>Age: <span id="age-display">16</span></label><br>
+        <input type="range" id="age-slider" min="13" max="19" value="16" class="slider">
+    </div>
+    
+    <div>
+        <label>Daily Usage: <span id="usage-display">5.0</span> hours</label><br>
+        <input type="range" id="usage-slider" min="0.5" max="12" value="5" step="0.5" class="slider">
+    </div>
+    
+    <button id="test-button">🚀 Test Button</button>
+    
+    <div id="output" class="output">Move sliders or click button...</div>
+
+    <script>
+        console.log('🔍 Test script starting...');
+        
+        // Test age slider
+        const ageSlider = document.getElementById('age-slider');
+        const ageDisplay = document.getElementById('age-display');
+        const usageSlider = document.getElementById('usage-slider');
+        const usageDisplay = document.getElementById('usage-display');
+        const testButton = document.getElementById('test-button');
+        const output = document.getElementById('output');
+        
+        console.log('Elements found:', {
+            ageSlider: !!ageSlider,
+            ageDisplay: !!ageDisplay,
+            usageSlider: !!usageSlider,
+            usageDisplay: !!usageDisplay,
+            testButton: !!testButton
+        });
+        
+        if (ageSlider && ageDisplay) {
+            ageSlider.addEventListener('input', function() {
+                ageDisplay.textContent = this.value;
+                output.textContent = `Age changed to: ${this.value}`;
+                console.log('Age slider worked:', this.value);
+            });
+        }
+        
+        if (usageSlider && usageDisplay) {
+            usageSlider.addEventListener('input', function() {
+                usageDisplay.textContent = parseFloat(this.value).toFixed(1);
+                output.textContent = `Usage changed to: ${this.value} hours`;
+                console.log('Usage slider worked:', this.value);
+            });
+        }
+        
+        if (testButton) {
+            testButton.addEventListener('click', function() {
+                output.textContent = '✅ Button clicked successfully!';
+                output.style.color = '#00ff88';
+                console.log('Button clicked successfully');
+            });
+        }
+        
+        console.log('✅ Test script loaded successfully');
+    </script>
+</body>
+</html>
